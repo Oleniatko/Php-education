@@ -7,7 +7,6 @@ function getSumElement($sum, $num) {
 	return $sum;
 }
 
-print_r(array_reduce($arr, 'getSumElement'));
-
-
+$result = array_reduce($arr, 'getSumElement');
+echo $result;
 

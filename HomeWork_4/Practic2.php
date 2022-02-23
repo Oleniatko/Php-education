@@ -2,8 +2,8 @@
 
 $arr = [0, 1, 2, 3, 4, 5];
 
-function chekConditions($num) {
-	If ($num > 3) {
+function checkConditions($num) {
+	If ($num >= 3) {
 		return true;
 	} else {
 		return false;
