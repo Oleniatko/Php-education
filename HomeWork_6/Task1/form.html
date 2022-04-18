@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <title>Form for sending data</title>
+  </head>
+  <body>
+    <h2>Форма для резюме</h2>
+    <form action="data.php" method="POST" enctype="multipart/form-data">
+        <div>
+            <p><b>Додайте своє фото</b></p>
+            <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
+            <input type="file" name="file" multiple>            
+        </div>
+        <p>Прізвище: <input  type="text"  name="surname" required/></p>
+        <p>Ім'я: <input type="text" name="name" required/> </p> 
+        <p>По-батькові: <input type="text" name="middleName"/></p>
+        <p>Вік: <input type="number" name="age" required/></p>
+        <p>Які мови програмування знаєте?</p>
+        <p>PHP<input type="checkbox" value="PHP" name="Php"></p>
+        <p>JavaScript<input type="checkbox" value="JavaScript" name="JavaScript"></p>
+        <p>Python<input type="checkbox" value="Python" name="Python"></p>
+        <p>Java<input type="checkbox" value="Java" name="Java"/></p>
+        <p>Маєте досвід роботи?</p>
+        <p>Так<input type="radio" name="experience" value1="так" name2="ні" value2="ні"></p>
+        <p>Ні<input type="radio" name="experience" value="ні"></p>
+        <p>Напишіть про себе: <br/><br/>
+            <textarea maxlength="300" name="aboutForMe"></textarea>
+        </p> 
+        <input type="submit" value="Відправити"/>
+        </form>
+  </body>
+</html>
+
+
+
+
+
