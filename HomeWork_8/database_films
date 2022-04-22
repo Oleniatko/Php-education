@@ -1,0 +1,65 @@
+CREATE DATABASE Films;
+USE Films;
+
+CREATE TABLE Films
+(
+    Id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    Title_of VARCHAR(20),
+    Releas_date YEAR
+);
+
+INSERT Films(Title_of, Releas_date) 
+VALUES 
+('Тітанік', 1997),
+('Оствінд', 2013),
+('Париж_почекає', 2017),
+('Мій_Вовк', 2021);
+
+
+CREATE TABLE Actors
+(
+    Id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    Surname VARCHAR(15),
+    Name VARCHAR(15),
+    Age INT
+);
+
+INSERT Actors(Surname, Name, Age)
+VALUES
+('Каріо', 'Чеки', 69),
+('Жиллен', 'Марі', 47),
+('Ельмосніно', 'Ерік', 58),
+('Лейн', 'Дайан', 57),
+('Болдуин', 'Алек', 64),
+('Бинке', 'Ханна', 23),
+('Фробёсс', 'Корнелия', 79),
+('Прюкнер', 'Тило', 82),
+('Ді_Капріо', 'Леонардо', 48),
+('Вінслет', 'Кейт', 47),
+('Пекстон', 'Білл', 67);
+
+
+CREATE TABLE Directors
+(
+    Id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    Surname VARCHAR(15),
+    Name VARCHAR(15),
+    Age INT,
+    Is_famous BOOL
+);
+
+INSERT Directors(Surname, Name, Age, Is_famous)
+VALUES
+('Гарнье', 'Катя фон', 55, FALSE),
+('Коппола', 'Элинор', 85, FALSE),
+('Імберт', 'Деніс', 50, FALSE),
+('Кемерон', 'Джеймс', 67, TRUE);
+
+-- Зробити вибірку фільмів, у яких режисер відомий
+SELECT * FROM Directors WHERE Is_famous = TRUE;
+
+-- Отримати дані про акторів, вік яких 43 роки
+SELECT * FROM Actors WHERE Age = 43;
+
+-- Змінити дату виходу фільму, які були випущені у 2021 році на 2022
+UPDATE Films SET Releas_date = 2022 WHERE Releas_date = 2021;
