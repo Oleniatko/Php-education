@@ -16,10 +16,6 @@ if(!move_uploaded_file($_FILES["file"]["tmp_name"], "/var/www/html/image". $_FIL
     echo "не вдалося завантажити файл";
 }
 
-if(isset($_POST["file"])){
-    $file = $_POST["file"];
-}
-
 if(isset($_POST["surname"])){
   
     $surname = $_POST["surname"];
